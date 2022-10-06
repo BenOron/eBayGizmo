@@ -1,0 +1,47 @@
+.about_page_wrapper {
+    display: grid;
+    grid-gap: 5px;
+    background-color: #fff;
+    color: #444;
+}
+
+
+
+.box {
+    background-color: rgba(176, 176, 176, 0.07);
+    border-radius: 5px;
+}
+
+.about_page_image {
+    grid-column: col 1 / span 4;
+    grid-row: row ;
+}
+
+.about_page_image >img{
+    max-width: 75%;
+    height: auto;
+}
+
+.about_page_description > span{
+    float: left;
+    font-size: 18px;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+.about_page_description {
+    grid-column: col 5 / span 6;
+    grid-row: row;
+    display: inline-grid;
+
+}
+.about_page_images_gallery {
+    grid-column: 2 / 12;
+    grid-row: 3 / 3;
+
+}
+
+.about_page_title{
+    grid-column: col 1 / span 4;
+}
