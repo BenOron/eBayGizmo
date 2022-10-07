@@ -45,8 +45,9 @@ const CarouselImages = () => {
 
     return (
         <section className={'carouselImages'}>
-            <div className="scroll-arrow" onClick={(e)=>touch(e,true)}  >&#8592;</div>
-            {images  &&  <ul className={'carouselImage_ul'} >
+            {!images && <h1>Loading image...</h1>}
+            {images  && <>  <div className="scroll-arrow" onClick={(e)=>touch(e,true)}  >&#8592;</div>
+            <ul className={'carouselImage_ul'} >
                 { images?.map((image,idx)=>{
                 return (
                         <li className={'carouselImage_'} key={'carouselImage_' + idx}>
@@ -54,10 +55,10 @@ const CarouselImages = () => {
                         </li>
                 )
             })}
-            </ul>}
+            </ul>
             <div className="scroll-arrow" onClick={(e)=>touch(e)} >
                 &#8594;
-            </div>
+            </div></>}
         </section>
     )
 }
