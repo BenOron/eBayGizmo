@@ -8,7 +8,7 @@ const AboutPage = (props) => {
     return (
         <div className={'about_page_wrapper'}>
             <h1 className={'about_page_title'} style={{textAlign:"start"}}>About The Program</h1>
-                { image && <div className={'box about_page_image'}><img src={image} alt={'Image not found'} /></div>}
+                { image && <div className={'box about_page_image'}><img src={image} alt={'not found'} /></div>}
                 { description && <div className={'box about_page_description'}>
                     <span>{description}</span>
                     <div className={'nav_buttons'}>

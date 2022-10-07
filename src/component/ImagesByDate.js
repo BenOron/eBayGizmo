@@ -1,4 +1,4 @@
-import React, { useState,useEffect,useRef } from "react";
+import React, { useState,useEffect } from "react";
 import {getImagesByDate} from "../utils.js"
 import Pagination from "./controls/pagination/Pagination"
 import '../styles/flipper.css'
@@ -45,15 +45,13 @@ const ImagesByDate = () => {
                 setCurrentPage(currentPage)
 
             }
-    },[currentPage])
+    },[currentPage,date])
 
     useEffect(()=>{
         if(images){
             setCurrentRecords(images?.slice(indexOfFirstRecord, indexOfLastRecord));
         }
-    },[images])
-
-    const ref = useRef();
+    },[images,indexOfFirstRecord,indexOfLastRecord])
 
 
     return (

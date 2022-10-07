@@ -7,8 +7,7 @@ import MarsWeather from "./component/MarsWeather"
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 
 
