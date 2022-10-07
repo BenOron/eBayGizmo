@@ -3,45 +3,123 @@
     grid-gap: 5px;
     background-color: #fff;
     color: #444;
+    max-width: 85vw;
+    margin: auto;
+    float: left;
 }
 
 
 
 .box {
-    background-color: rgba(176, 176, 176, 0.07);
-    border-radius: 5px;
+background-color: rgba(176, 176, 176, 0.07);
+border-radius: 5px;
 }
 
 .about_page_image {
-    grid-column: col 1 / span 4;
-    grid-row: row ;
+grid-column: col 1 / span 4;
+grid-row: row ;
+    text-align: center;
 }
 
 .about_page_image >img{
-    max-width: 75%;
-    height: auto;
+max-width: 75%;
+height: auto;
 }
 
-.about_page_description > span{
+.about_page_description > span {
     float: left;
     font-size: 18px;
     padding: 10px;
-    margin: 20px;
 }
 
 
 .about_page_description {
-    grid-column: col 5 / span 6;
-    grid-row: row;
-    display: inline-grid;
+grid-column: col 5 / span 6;
+grid-row: row;
+display: inline-grid;
 
 }
 .about_page_images_gallery {
-    grid-column: 2 / 12;
-    grid-row: 3 / 3;
+grid-column: 2 / 12;
+grid-row: 3 / 3;
 
 }
 
 .about_page_title{
-    grid-column: col 1 / span 4;
+grid-column: col 1 / span 4;
 }
+
+/*ImageByDate*/
+img.imagesByDate_img {
+    background: #F1F1FA;
+    width: 12vw;
+    height: 16vh;
+    display: block;
+    margin: 0 10px 10px ;
+    border: 0;
+    border-radius: 8px;
+}
+
+div.imagesByDate{
+    max-width: 85vw;
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    overflow: scroll;
+    padding:1vh 0 1vh 6vh;
+}
+
+input.dateInput{
+    border-radius: 10px;
+    width: 6vw;
+    padding: 5px;
+    margin-left: 10px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: #a58b6be3;
+    border-image: initial;
+    color: #866a48e3;
+    font-weight: bold;
+}
+
+
+
+.marsWeather_box {
+    border: 1px solid gray;
+    width: 15vw;
+    text-align: left;
+    padding: 0 0 9px 9px;
+    margin: 10px;
+}
+
+.marsWeather_box span {
+    float: right;
+    padding-right: 15%;
+}
+
+.marsWeather_container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    overflow: scroll;
+    padding:5vh 5vh 5vh;
+}
+
+.marsWeather_sortBy{
+    height: 2vh;
+    margin-top: 3vh;
+    float: right;
+    margin-left: 61vw;
+}
+
+.nav_buttons > a {
+    background: #d3c7a7;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 7px;
+    color: #000;
+    text-decoration: unset;
+}
+

@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import CarouselImages from "./controls/carouselImages/CarouselImages"
+import {Link} from "react-router-dom";
 
 const AboutPage = (props) => {
     const  {image,description} = props;
+
     return (
         <div className={'about_page_wrapper'}>
             <h1 className={'about_page_title'} style={{textAlign:"start"}}>About The Program</h1>
@@ -10,11 +12,12 @@ const AboutPage = (props) => {
                 { description && <div className={'box about_page_description'}>
                     <span>{description}</span>
                     <div className={'nav_buttons'}>
-                        <button>View Images By Date</button>
-                        <button>View Weather</button>
+                       <Link to="/imagesByDate">View Images By Date</Link>
+                       <Link to="marsWeather">View Weather</Link>
                     </div>
                 </div> }
             <div className={'box about_page_images_gallery'}>
+                <h2 style={{padding:"10px"}}>Curiosity rover images<span style={{color:'#bca06c'}}> from today</span></h2>
                 <CarouselImages />
             </div>
         </div>

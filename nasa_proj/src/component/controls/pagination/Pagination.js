@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './pagination.css'
 const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
 
     const pageNumbers = [...Array(nPages + 1).keys()].slice(1)
@@ -13,33 +13,27 @@ const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
         if(currentPage !== 1) setCurrentPage(currentPage - 1)
     }
     return (
-        <nav>
-            <ul className='pagination justify-content-center'>
+        <nav style={{textAlign:'center'}}>
+            <ul className='pagination'>
                 <li className="page-item">
-                    <a className="page-link"
+                    <button className="likeLink"
                        onClick={prevPage}
-                       href='#'>
+                      >
 
                         Previous
-                    </a>
+                    </button>
                 </li>
                 {pageNumbers.map(pgNumber => (
                     <li key={pgNumber}
                         className= {`page-item ${currentPage === pgNumber ? 'active' : ''} `} >
-                        <a onClick={() => setCurrentPage(pgNumber)}
-                           className='page-link'
-                           href='#'>
+                        <button onClick={() => setCurrentPage(pgNumber)}
+                           className='likeLink'>
                             {pgNumber}
-                        </a>
+                        </button>
                     </li>
                 ))}
                 <li className="page-item">
-                    <a className="page-link"
-                       onClick={nextPage}
-                       href='#'>
-
-                        Next
-                    </a>
+                    <button className="likeLink" onClick={nextPage} >Next</button>
                 </li>
             </ul>
         </nav>
