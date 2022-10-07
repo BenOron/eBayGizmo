@@ -35,6 +35,7 @@ const CarouselImages = () => {
     },[])
 
 
+
     const touch  = (e,back) =>{
         if(back){
             e.target.parentElement.getElementsByClassName('carouselImage_ul')[0].scrollBy(-750, 0);

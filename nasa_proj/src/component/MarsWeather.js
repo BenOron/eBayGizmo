@@ -4,8 +4,9 @@ import {getWeather} from "../utils"
 const MarsWeather = () => {
     const [marsWeatherData,setMarsWeatherData] = useState([])
     const [sortedData,setSortedData] =useState([])
+
     const getMarsWeather = async (selectedDate) => {
-        getWeather().then(res => {
+        getWeather(true).then(res => {
             if (res && res?.sol_keys) {
                 const data = [];
                 for (const [key,value] of Object.entries( res.sol_keys)) {
@@ -20,6 +21,8 @@ const MarsWeather = () => {
             }
         })
     }
+
+
     const handleChange = (e) => {
         const sortBy = e.target.value;
         let sortedDataRes = [];
@@ -37,11 +40,12 @@ const MarsWeather = () => {
         getMarsWeather();
     },[])
 
+
     useEffect(()=>{
         if(marsWeatherData && sortedData.length > 0){
             setMarsWeatherData(sortedData);
         }
-    },[sortedData,marsWeatherData])
+    },[sortedData,marsWeatherData,setSortedData])
 
 
     return (
@@ -52,7 +56,7 @@ const MarsWeather = () => {
             <h1>Mars Images By Date</h1>
              </div>
             <div className={'marsWeather_container'}>
-                <div><select className={'marsWeather_sortBy'} name="sortby" onChange={handleChange} >
+                <div><select className={'marsWeather_sortBy'} name="sortby" onChange={(e)=>handleChange(e)} >
                     <option value="null">Sort By</option>
                     <option value="temperature">Temperature</option>
                     <option value="pressure">Pressure</option>

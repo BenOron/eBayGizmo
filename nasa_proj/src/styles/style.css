@@ -95,7 +95,7 @@ input.dateInput{
 
 .marsWeather_box span {
     float: right;
-    padding-right: 15%;
+    padding-right: 5px;
 }
 
 .marsWeather_container{

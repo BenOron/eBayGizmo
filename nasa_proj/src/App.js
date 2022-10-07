@@ -11,7 +11,6 @@ import {
 } from "react-router-dom";
 
 
-
 function App() {
 
     const routes = [
@@ -46,7 +45,6 @@ function App() {
   return (
       <div className="App">
         <Router>
-
             <Switch>
                 <Switch>
                     {routes.map((route, i) => (

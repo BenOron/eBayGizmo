@@ -9,8 +9,6 @@ const ApiKey  ='&api_key=6KfSVyinleEDG2Jo4qIxdb1JbdQBy8QW8OJH9A5g'
 
 //https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=6KfSVyinleEDG2Jo4qIxdb1JbdQBy8QW8OJH9A5g
 
-//https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=DEMO_KEY&page=2
-
 
 
 /**
@@ -29,17 +27,28 @@ export const getImagesByDate = async (date,page) => {
 }
 
 /**
- * Return all ImagesByDate
+ * Return all Weather info
  * @returns {Promise<unknown>}
  */
-export const getWeather = async () => {
+export const getWeather = async (realData) => {
      let weatherData = '';
-     try {
-         weatherData = await axios.get('../mockJson/insight_weather.json');
-         return weatherData.data;
-     } catch (err) {
-         console.error(err);
+     if(realData){
+         const api = 'https://mars.nasa.gov/rss/api/?feed=weather&category=insight_temperature&feedtype=json&ver=1.0'
+         try {
+             weatherData = await axios.get(api);
+             return weatherData.data;
+         } catch (err) {
+             console.error(err);
+         }
+     }else{
+         try {
+             weatherData = await axios.get('../mockJson/insight_weather.json');
+             return weatherData.data;
+         } catch (err) {
+             console.error(err);
+         }
      }
+
     /*axios.get('../mockJson/insight_weather.json')
         .then((res)=>{
             return(res.data);
