@@ -34,6 +34,9 @@ const ImagesByDate = () => {
         setDate(e.target.value);
     }
 
+    const openInNewTab = url => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
 
     useEffect(()=>{
             if(date){
@@ -66,8 +69,8 @@ const ImagesByDate = () => {
             {!loading && currentRecords  &&  <div className={'imagesByDate'}>
                 { currentRecords?.map((image,idx)=>{
                     return (
-                        <div className="flip-container" key={'imagesByDate_' + idx}>
-                            <div className="flipper">
+                        <div className="flip-container" style={{cursor:'pointer'}} key={'imagesByDate_' + idx}>
+                            <div className="flipper" onClick={() => openInNewTab(image.img_src)}>
                                 <div clas="front">
                                     <img className={'imagesByDate_img'}  src={image.img_src} alt={'N/A'}/>
                                 </div>
