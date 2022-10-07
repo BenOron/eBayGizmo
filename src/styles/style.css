@@ -22,13 +22,14 @@ grid-row: row ;
 }
 
 .about_page_image >img{
-max-width: 100%;
-height: auto;
+    max-width: 100%;
+    height: auto;
+    width: 30vw;
 }
 
 .about_page_description > span {
     float: left;
-    font-size: 18px;
+    font-size: 1vw;
     padding: 10px;
 }
 
@@ -87,10 +88,11 @@ input.dateInput{
 
 .marsWeather_box {
     border: 1px solid gray;
-    width: 15vw;
+    width: auto;
     text-align: left;
     padding: 0 0 9px 9px;
     margin: 10px;
+    font-size: 1.5vh;
 }
 
 .marsWeather_box span {
@@ -114,6 +116,9 @@ input.dateInput{
     margin-left: 61vw;
 }
 
+.nav_buttons{
+    display: flex;
+}
 .nav_buttons > a {
     background: #d3c7a7;
     margin: 10px;

@@ -11,11 +11,13 @@ const AboutPage = (props) => {
                 { image && <div className={'box about_page_image'}><img src={image} alt={'not found'} /></div>}
             { !image && <div className={'box about_page_image'}> <h1>Loading image...</h1></div>}
                 { description && <div className={'box about_page_description'}>
-                    <span>{description}</span>
-                    <div className={'nav_buttons'}>
+                    <span>{description}
+                        <div className={'nav_buttons'}>
                        <Link to="/imagesByDate">View Images By Date</Link>
                        <Link to="marsWeather">View Weather</Link>
                     </div>
+                    </span>
+
                 </div> }
             <div className={'box about_page_images_gallery'}>
                 <h2 style={{padding:"10px"}}>Curiosity rover images<span style={{color:'#bca06c'}}> from today</span></h2>

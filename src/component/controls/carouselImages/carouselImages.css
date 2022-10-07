@@ -54,8 +54,8 @@
 
 
 .carouselImage_,  .carouselImage {
-    width: 200px;
-    height: 200px;
+    width: 15vh;
+    height: 20vh;
 }
 
 .carouselImage_:hover {
