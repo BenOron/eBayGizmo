@@ -34,7 +34,7 @@
 
 .back {
     -webkit-transform: rotateY(180deg);
-    background: #F1F1FA;
+    background: #f1f1facc;
     width: 12vw;
     height: 16vh;
     display: block;
