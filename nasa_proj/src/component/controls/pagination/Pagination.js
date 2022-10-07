@@ -19,7 +19,6 @@ const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
                     <button className="likeLink"
                        onClick={prevPage}
                       >
-
                         Previous
                     </button>
                 </li>
