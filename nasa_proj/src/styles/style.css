@@ -22,7 +22,7 @@ grid-row: row ;
 }
 
 .about_page_image >img{
-max-width: 75%;
+max-width: 100%;
 height: auto;
 }
 

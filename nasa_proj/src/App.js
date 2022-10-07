@@ -7,8 +7,10 @@ import MarsWeather from "./component/MarsWeather"
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route,
+    Link
 } from "react-router-dom";
+
 
 
 function App() {
@@ -46,11 +48,9 @@ function App() {
       <div className="App">
         <Router>
             <Switch>
-                <Switch>
                     {routes.map((route, i) => (
                         <RouteWithSubRoutes key={i} {...route} />
                     ))}
-                </Switch>
             </Switch>
         </Router>
       </div>

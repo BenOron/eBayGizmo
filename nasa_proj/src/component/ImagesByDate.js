@@ -2,6 +2,7 @@ import React, { useState,useEffect,useRef } from "react";
 import {getImagesByDate} from "../utils.js"
 import Pagination from "./controls/pagination/Pagination"
 import '../styles/flipper.css'
+import {Link} from "react-router-dom"
 
 
 const ImagesByDate = () => {
@@ -57,6 +58,7 @@ const ImagesByDate = () => {
 
     return (
         <div >
+            <Link to="/" style={{float:'right'}}>Home</Link>
             <div style={{textAlign:"start",marginLeft:"4vw"}}>
                 <h1 >Mars Images By Date</h1>
                 <form >

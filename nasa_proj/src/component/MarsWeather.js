@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import {getWeather} from "../utils"
+import {Link} from "react-router-dom"
 
 const MarsWeather = () => {
     const [marsWeatherData,setMarsWeatherData] = useState([])
@@ -51,9 +52,8 @@ const MarsWeather = () => {
 
     return (
         <div >
-           <div style={{textAlign:'center'
-
-           }}>
+            <Link to="/" style={{float:'right'}}>Home</Link>
+           <div style={{textAlign:'center'}}>
             <h1>Mars Images By Date</h1>
              </div>
             <div className={'marsWeather_container'}>
