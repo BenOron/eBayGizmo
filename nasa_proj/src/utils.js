@@ -48,12 +48,4 @@ export const getWeather = async (realData) => {
              console.error(err);
          }
      }
-
-    /*axios.get('../mockJson/insight_weather.json')
-        .then((res)=>{
-            return(res.data);
-        }).catch((err)=>{
-        console.log(err);
-    })*/
-
 }

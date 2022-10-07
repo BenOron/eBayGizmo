@@ -6,6 +6,7 @@ const MarsWeather = () => {
     const [sortedData,setSortedData] =useState([])
 
     const getMarsWeather = async (selectedDate) => {
+        //the true flag for real api data or mock
         getWeather(true).then(res => {
             if (res && res?.sol_keys) {
                 const data = [];
